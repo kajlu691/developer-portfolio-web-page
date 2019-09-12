@@ -16,29 +16,31 @@
   <body>
     <main>
       <div class="wrapper">
-        <button class="hamburger hamburger--active">
+        <button class="hamburger">
           <span class="hamburger__box">
             <span class="hamburger__inner"></span>
           </span>
         </button>
       </div>
-      <nav>
-        <ul class="navigation">
-          <a href="#">About me</a>
-          <a href="#">My skills</a>
-          <a href="#">What I do</a>
-          <a href="#">My recent works</a>
-          <a href="#">Contact</a>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#">About me</a></li>
+          <li class="navigation__item"><a href="#">My skills</a></li>
+          <li class="navigation__item"><a href="#">What I do</a></li>
+          <li class="navigation__item"><a href="#">My recent works</a></li>
+          <li class="navigation__item"><a href="#">Contact</a></li>
         </ul>
       </nav>
       <header>
         <h1>ALEX VIDAL</h1>
         <h3>Full Stack Developer</h3>
       </header>
-      <button type="button">HIRE ME</button>
-      <button type="button">EXPLORE MORE</button>
-      <picture>
-        <img src="img/main-img2.png" alt="Main image" />
+      <div class="main-buttons">
+        <button type="button" class="btn btn--dark">HIRE ME</button>
+        <button type="button" class="btn btn--light">EXPLORE MORE</button>
+      </div>
+      <picture class="main-img">
+        <img src="img/main-img3.png" alt="Main image" />
       </picture>
     </main>
     <section>
@@ -168,7 +170,6 @@
     </footer>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script type="text/javascript" src="js/bundle.js"></script>
     <script type="text/javascript" src="js/bundle.js"></script>
   </body>
 </html>

@@ -16,6 +16,31 @@ body {
 }
 
 /* ---------------
+---REUSABLE COMPONENTS---
+-------------------*/
+
+h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.btn {
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: none;
+  width: 120px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 2px;
+}
+
+/* ---------------
 ---HAMBURGER MENU---
 -------------------*/
 
@@ -31,7 +56,7 @@ body {
   cursor: pointer;
   background-color: transparent;
   border: 0;
-  margin: 0;
+  margin-right: 5px;
   z-index: 1;
 }
 
@@ -89,7 +114,7 @@ body {
   font-weight: 600;
   height: 100vh;
   width: 100vw;
-  background-color: #534d4a;
+  background-color: #e7e7e7;
   position: absolute;
   left: 0;
   top: 0;
@@ -119,5 +144,75 @@ body {
 
 .navigation__item a {
   text-decoration: none;
+  color: #4e4e4e;
+}
+
+/* ---------------
+  ---HEADER---
+-------------------*/
+main {
+  height: 100vh;
+  width: auto;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 0.5fr 1fr;
+}
+
+header {
+  align-self: end;
+  margin-left: 1.2rem;
+  align-self: center;
+}
+
+.main-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn--light {
+  font-size: 0.8rem;
+  border: 2px solid #928c8c;
+  box-shadow: 0px 0px 4px -3px rgba(0, 0, 0, 0.67);
+}
+
+.btn--dark {
+  background-color: #000000;
   color: #ffffff;
+}
+
+.btn--dark::before {
+  content: '';
+  background-color: #e7e7e7;
+  position: absolute;
+  width: 140px;
+  height: 300px;
+  left: 0;
+  top: 80px;
+  z-index: -2;
+}
+
+.btn--dark::after {
+  content: '';
+  background-color: #ffffff;
+  position: absolute;
+  width: 120px;
+  height: 260px;
+  left: 0;
+  top: 100px;
+  z-index: -1;
+}
+
+.main-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-img::before {
+  content: '';
+  background-color: #e7e7e7;
+  width: 160px;
+  height: 240px;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
 }
