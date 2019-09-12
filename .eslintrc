@@ -1,0 +1,14 @@
+{
+  "extends": ["wesbos"],
+  "rules": {
+    "no-unused-vars": 0
+  },
+  "overrides": [
+    {
+      "files": ["*-main.js", "*.main.js", "*dist/main.js", "*./dist/main.js"],
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
+}
