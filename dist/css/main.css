@@ -15,6 +15,10 @@ body {
   overflow-x: hidden;
 }
 
+/* ---------------
+---HAMBURGER MENU---
+-------------------*/
+
 .wrapper {
   display: flex;
   justify-content: flex-end;
@@ -28,6 +32,7 @@ body {
   background-color: transparent;
   border: 0;
   margin: 0;
+  z-index: 1;
 }
 
 .hamburger__box {
@@ -45,6 +50,7 @@ body {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  transition: background-color 0.3s 0.1s ease-in-out;
 }
 
 .hamburger__inner::before,
@@ -55,6 +61,7 @@ body {
   background-color: #000000;
   position: absolute;
   left: 0;
+  transition: transform 0.2s 0.2s ease-in-out;
 }
 
 .hamburger__inner::before {
@@ -77,13 +84,40 @@ body {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-nav ul {
-  list-style: none;
-  display: none;
+.navigation {
+  font-size: 1.4rem;
+  font-weight: 600;
+  height: 100vh;
+  width: 100vw;
+  background-color: #534d4a;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  transform: translateX(-100vw);
+  transition: transform 0.3s 0.1s ease-in-out;
 }
 
-.navigation a {
+.navigation--active {
+  transform: translateX(0px);
+}
+
+.navigation__list {
+  position: absolute;
+  left: -1rem;
+  list-style: none;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  width: 100%;
+  justify-items: center;
+}
+
+.navigation__item {
+  margin-bottom: 20px;
+}
+
+.navigation__item a {
   text-decoration: none;
-  display: block;
-  color: #000000;
+  color: #ffffff;
 }

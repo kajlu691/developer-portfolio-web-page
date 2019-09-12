@@ -1,9 +1,10 @@
-const hamburger = document.querySelector('.hamburger');
+import { elements } from './views/base';
 
-const handleClick = () => {
-  hamburger.preventDefault();
-  hamburger.classList.toggle('hamburger--active');
-  console.log('elo');
-};
-
-hamburger.addEventListener('click', handleClick);
+// Mobile navigation hamburger menu
+elements.hamburger.addEventListener('click', e => {
+  // Prevent event from firing twice
+  e.stopImmediatePropagation();
+  // Navigation's animation toggle
+  elements.hamburger.classList.toggle('hamburger--active');
+  elements.nav.classList.toggle('navigation--active');
+});
